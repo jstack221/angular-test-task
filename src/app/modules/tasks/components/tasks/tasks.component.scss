@@ -13,50 +13,50 @@
       margin-top: 20px;
     }
   }
-}
+
+  .cursor {
+    cursor: pointer;
+  }
   
-.center {
-  text-align: center;
-}
+  .select-box {
+    width: 90px;
+    height: 26px;
+  }
+  
+  .message-box {
+    border: 1px solid;
+    width: 58%;
+    padding: 11px;
+    line-height: 2;
+  }
+  
+  .message-input {
+    height: 20px;
+    margin-right: 7px;
+    min-width: 280px;
+  }
 
-.blink {
-  animation: blinker 1s linear infinite;
-}
+  .blink {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .btn {
+    border: none;
+    width: 60px;
+    height: 26px;
+  }
 
-@keyframes blinker {
-  50% {
-    opacity: 0;
+  .center {
+    text-align: center;
   }
 }
-
-.btn {
-  border: none;
-  width: 60px;
-  height: 26px;
-}
-
-.cursor {
-  cursor: pointer;
-}
-
-.select-box {
-  width: 90px;
-  height: 26px;
-}
-
-.message-box {
-  border: 1px solid;
-  width: 58%;
-  padding: 11px;
-  line-height: 2;
-}
-
-.message-input {
-  height: 20px;
-  margin-right: 7px;
-  min-width: 280px;
-}
-
+  
 @mixin setColors($theme)
 {
   .tasks-container {
@@ -78,6 +78,8 @@
   }
 }
 
+// Here we're modifying the color styles of mentioned selectors
+// as per the selected theme i.e light or dark
 div[data-theme='light'] {
   @include setColors(1);
 }
@@ -85,5 +87,3 @@ div[data-theme='light'] {
 div[data-theme='dark'] {
   @include setColors(2);
 }
-
-
