@@ -14,5 +14,10 @@
       [themes] = "themes"
       (themeChange) = "themeChange($event)">
     </app-fifth-task>
+    <!-- Sixth Task -->
+    <app-last-task 
+      *ngFor="let conversation of conversationList" 
+      [conversation]="conversation">
+    </app-last-task>  
   </div>  
 </div>
