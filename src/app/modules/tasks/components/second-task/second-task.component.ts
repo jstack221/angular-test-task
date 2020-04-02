@@ -9,7 +9,6 @@ import { map } from 'rxjs/operators';
   templateUrl: './second-task.component.html',
   styleUrls: ['./second-task.component.scss']
 })
-
 export class SecondTaskComponent implements OnInit {
   isUserOnline$: Observable<boolean>;
   isUserLoggedIn$: Observable<boolean>;

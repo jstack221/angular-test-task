@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
-
 @Component({
   selector: 'app-fifth-task',
   templateUrl: './fifth-task.component.html',

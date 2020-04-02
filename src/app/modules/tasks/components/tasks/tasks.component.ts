@@ -11,7 +11,6 @@ import { select, Store } from '@ngrx/store';
   styleUrls: ['./tasks.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-
 export class TasksComponent implements OnInit, OnDestroy {
   private ConversationSubscription: Subscription;
   private conversation$: Observable<any>;

@@ -10,7 +10,6 @@ import { User } from "../../models";
   templateUrl: './first-task.component.html',
   styleUrls: ['./first-task.component.scss']
 })
-
 export class FirstTaskComponent implements OnInit, OnDestroy {
   checkOnlineSubscription: Subscription;
   userSubscription: Subscription;

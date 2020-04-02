@@ -7,7 +7,6 @@ import { bufferTime } from 'rxjs/operators';
   templateUrl: './third-task.component.html',
   styleUrls: ['./third-task.component.scss']
 })
-
 export class ThirdTaskComponent implements OnInit, OnDestroy {
   private myNumber$: Observable<number>;
   private numberSubscription: Subscription;
