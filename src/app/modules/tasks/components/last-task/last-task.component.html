@@ -1,0 +1,24 @@
+<div class="task-root last-task">
+  <h1>Last-Task</h1>
+  <h2>Default Conversation with # {{ conversation.userName }} User: </h2>
+  <div *ngFor="let message of conversation.messages" class="message-box">
+    <span>Message Id: {{message.id}} </span><br/>
+    <span>Message: {{ message.message }}</span><br/> 
+    <span>Sent Time: {{ message.createdDate | date:'medium'}}</span><br/>
+  </div>
+  <div class="user-message-container">
+    <h3>Add new Message</h3>
+    <form (ngSubmit)="sendMessage()">
+      <input
+        autocomplete="off"
+        [(ngModel)]="message"
+        placeholder="Enter message.."
+        name="message"
+        class="message-input"
+      />
+      <button type="submit" class="btn">
+        Send
+      </button>
+    </form>
+  </div>
+</div>

@@ -11,6 +11,12 @@ import { SecondTaskComponent } from './components/second-task/second-task.compon
 import { ThirdTaskComponent } from './components/third-task/third-task.component';
 import { FourthTaskComponent } from './components/fourth-task/fourth-task.component';
 import { FifthTaskComponent } from './components/fifth-task/fifth-task.component';
+import { LastTaskComponent } from './components/last-task/last-task.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { ConversationReducer } from './store/reducers/conversation.reducer';
+import { ConversationEffects } from './store/effects/conversation.effect';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +25,17 @@ import { FifthTaskComponent } from './components/fifth-task/fifth-task.component
     ThirdTaskComponent,
     FourthTaskComponent,
     FifthTaskComponent,
+    LastTaskComponent,
     TasksComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     TasksRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
+    StoreModule.forFeature('conversations' , ConversationReducer),
+    EffectsModule.forFeature([ConversationEffects]),
   ],
   providers: [
     TasksHelperService,
