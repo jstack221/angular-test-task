@@ -1,0 +1,22 @@
+<div class="task-root">
+  <h1>Second-Task</h1>
+  <button 
+    *ngIf="!(isUserLoggedIn$ | async)" 
+    type="button" 
+    class="btn cursor"
+    (click)="login()">
+    Login
+  </button>
+
+  <button 
+    *ngIf="(isUserLoggedIn$ | async)" 
+    type="button" 
+    class="btn cursor"
+    (click)="logOut()">
+    Logout
+  </button>
+
+  <h3 *ngIf="(isUserOnline$ | async)" class="success">
+    User is online and logged in
+  </h3>
+</div>  

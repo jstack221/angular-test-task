@@ -1,0 +1,18 @@
+<div #dataTheme [attr.data-theme]="selectedTheme" >
+  <div class="tasks-container">
+    <h1 class="center">Test Tasks</h1>
+    <!-- First Task -->
+    <app-first-task></app-first-task>
+    <!-- Second Task -->
+    <app-second-task></app-second-task>
+    <!-- Third Task -->
+    <app-third-task></app-third-task>
+    <!-- Fourth Task -->
+    <app-fourth-task></app-fourth-task>
+    <!-- Fifth Task -->
+    <app-fifth-task 
+      [themes] = "themes"
+      (themeChange) = "themeChange($event)">
+    </app-fifth-task>
+  </div>  
+</div>

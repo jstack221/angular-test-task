@@ -1,0 +1,9 @@
+<div class="task-root">
+  <select 
+    (change)="onHandleChange($event)" 
+    class="select-box">
+    <option *ngFor="let theme of themes" [value]="theme">
+      {{theme}}
+    </option>
+  </select>
+</div>

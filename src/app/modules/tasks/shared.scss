@@ -1,0 +1,23 @@
+
+$colors: (
+  // Colors for theme 1 i.e light theme
+  backgound-theme-1: white,
+  heading-text-theme-1: inherit,
+  button-color-theme-1: inherit,
+  button-background-color-theme-1: #e0dfe0,
+  select-color-theme-1: black,
+  select-background-color-theme-1: #e0dfe0,
+  
+  // Colors for theme 2 i.e dark theme
+  backgound-theme-2: #404857,
+  heading-text-theme-2: #c3c9d3,
+  button-color-theme-2: #404857,
+  button-background-color-theme-2: #a5aebd,
+  select-color-theme-2: white,
+  select-background-color-theme-2: #404857
+);
+
+// return the correct color from colors map
+@function col($col, $theme) {
+	@return map-get($colors, #{$col}-#{$theme});
+}

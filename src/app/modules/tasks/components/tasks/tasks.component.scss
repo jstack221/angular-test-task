@@ -1,0 +1,70 @@
+@import "../../shared.scss";
+
+.task-root {
+  border: 1px solid;
+  padding: 20px;
+
+  h1 {
+    text-decoration: underline;
+  }
+}
+  
+.center {
+  text-align: center;
+}
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.btn {
+  border: none;
+  width: 60px;
+  height: 26px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.select-box {
+  width: 90px;
+  height: 26px;
+}
+
+@mixin setColors($theme)
+{
+  .tasks-container {
+    background-color: col('backgound-theme', $theme);
+
+    h1, h3 {
+      color: col('heading-text-theme', $theme);
+    }
+
+    .btn {
+      background-color: col('button-background-theme', $theme);
+      color: col('button-color-theme', $theme);
+    }
+
+    .select-box {
+      background-color: col('select-background-color-theme', $theme);
+      color: col('select-color-theme', $theme);
+    }
+  }
+}
+
+div[data-theme='light'] {
+  @include setColors(1);
+}
+
+div[data-theme='dark'] {
+  @include setColors(2);
+}
+
+

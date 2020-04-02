@@ -1,0 +1,12 @@
+<div class="task-root">
+  <h1>First-task</h1>
+  <h3 *ngIf="(isOnline$ | async)" class="blink">
+    Polling Started...
+  </h3>
+  <h3 *ngIf="!(isOnline$ | async)">
+    Offline status detected.. Polling Stopped...
+  </h3>
+
+  <h3>User Data: (Fetching data from [https://reqres.in/api/users/]) </h3><br/>
+  {{ user | json }}
+</div>

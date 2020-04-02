@@ -1,0 +1,13 @@
+<div class="task-root">
+  <h1>Fourth-Task</h1>
+  <input
+    name="searchMessages"
+    type="text"
+    placeholder="Filter message by text..."
+    (input)="onInputChange($event)">
+  <ul>
+    <li *ngFor="let message of messages">
+      {{ message.text }}
+    </li>
+  </ul>
+</div>
