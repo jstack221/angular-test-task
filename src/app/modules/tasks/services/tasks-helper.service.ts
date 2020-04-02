@@ -75,6 +75,18 @@ export class TasksHelperService {
    * 
    */
   convertTextToLowerCase(input: string): string {
-    return input && input.trim() && input.toLocaleLowerCase();
+    return this.isVaidString(input) && input.toLocaleLowerCase();
+  }
+
+  /**
+   * Method is used for check whether the string is valid or not.
+   * 
+   * @param input string
+   * 
+   * @returns string
+   * 
+   */
+  isVaidString(input: string): string {
+    return input && input.trim()
   }
 }
