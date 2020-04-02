@@ -3,7 +3,7 @@
   <h3 *ngIf="(isOnline$ | async)" class="blink">
     Polling Started...
   </h3>
-  <h3 *ngIf="!(isOnline$ | async)">
+  <h3 *ngIf="!(isOnline$ | async)" class="blink">
     Offline status detected.. Polling Stopped...
   </h3>
 
