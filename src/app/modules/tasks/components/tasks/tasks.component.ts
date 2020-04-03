@@ -15,7 +15,6 @@ export class TasksComponent implements OnInit, OnDestroy {
   private ConversationSubscription: Subscription;
   private conversation$: Observable<any>;
   public conversationList: Conversation[];
-  @ViewChild('dataTheme') dataTheme: ElementRef;
   themes = ['light', 'dark'];
   selectedTheme = 'light';
 
