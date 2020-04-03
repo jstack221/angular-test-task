@@ -33,7 +33,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     TasksRoutingModule,
     HttpClientModule,
-    
     StoreModule.forFeature('conversations' , ConversationReducer),
     EffectsModule.forFeature([ConversationEffects]),
   ],
@@ -45,4 +44,4 @@ import { FormsModule } from '@angular/forms';
   exports: [TasksComponent]
 })
 
-export class TasksModule { }
+export class TasksModule {}

@@ -1,6 +1,6 @@
 <div class="task-root last-task">
   <h1>Task-6</h1>
-  <h2>Default Conversation with # {{ conversation.userName }} User: </h2>
+  <h2>Conversation with Default User '{{ conversation.userName }}'</h2>
   <div *ngFor="let message of conversation.messages" class="message-box">
     <span>Message Id: {{message.id}} </span><br/>
     <span>Message: {{ message.message }}</span><br/> 
