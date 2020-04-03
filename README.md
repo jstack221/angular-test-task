@@ -2,9 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
 
-## Development server
+## Project Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- npm i (for installing the dependencies)
+
+- Run `ng serve` or `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## I've set up following things in this angular test app:
+- Setup routing two routes (`/home` and `/test-tasks`).  
+- Created feature module `tasks` which contains all the task components and I have created a separate component for each of the task.
+- Added lazy loading on the tasks module and this tasks module loaded when user open route `/test-tasks`.
 
 ## Code scaffolding
 
